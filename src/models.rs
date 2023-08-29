@@ -10,7 +10,7 @@ pub struct Epic {
     pub name: String,
     pub description: String,
     pub status: Status,
-    pub stories: Vec<i32>,
+    pub stories: Vec<u32>,
 }
 
 impl Epic {
@@ -32,7 +32,7 @@ impl Story {
 }
 
 pub struct DBState {
-    pub last_item_id: i32,
+    pub last_item_id: u32,
     pub epics: Vec<Epic>,
     pub stories: Vec<Story>,
 }
