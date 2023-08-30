@@ -6,14 +6,14 @@ use crate::models::{DBState, Epic, Status, Story};
 
 // Database is a trait with two methods, read_db and write_db.
 // For simplicity we will read/write the entire state of the database.
-trait Database {
+pub trait Database {
     fn read_db(&self) -> Result<DBState>;
     fn write_db(&self, db_state: &DBState) -> Result<()>;
 }
 
 // JSONFileDatabase is a Struct that implements the Database
-struct JSONFileDatabase {
-    file_path: String,
+pub struct JSONFileDatabase {
+    pub file_path: String,
 }
 
 impl JSONFileDatabase {
